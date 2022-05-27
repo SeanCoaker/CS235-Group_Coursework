@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LeaderboardController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="85.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" width="1000.0">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#007516" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="2.0" arcWidth="5.0" height="49.0" layoutX="451.0" layoutY="375.0" stroke="BLACK" strokeType="INSIDE" width="106.0">
+         <fill>
+            <RadialGradient centerX="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#2fff00" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="2.0" arcWidth="5.0" height="42.0" layoutX="451.0" layoutY="392.0" stroke="BLACK" strokeType="INSIDE" width="106.0">
+         <fill>
+            <RadialGradient centerX="0.48333333333333334" centerY="1.0" radius="0.5">
+               <stops>
+                  <Stop color="#2fff00" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="2.0" arcWidth="5.0" height="212.0" layoutX="241.0" layoutY="144.0" stroke="BLACK" strokeType="INSIDE" width="520.0">
+         <fill>
+            <RadialGradient centerX="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#2fff00" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="2.0" arcWidth="5.0" height="49.0" layoutX="56.0" layoutY="400.0" stroke="BLACK" strokeType="INSIDE" width="106.0">
+         <fill>
+            <RadialGradient centerX="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#2fff00" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="2.0" arcWidth="5.0" height="143.0" layoutX="240.0" layoutY="213.0" stroke="BLACK" strokeType="INSIDE" width="520.0">
+         <fill>
+            <RadialGradient centerX="0.48333333333333334" centerY="1.0" radius="0.5">
+               <stops>
+                  <Stop color="#2fff00" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="2.0" arcWidth="5.0" height="42.0" layoutX="56.0" layoutY="417.0" stroke="BLACK" strokeType="INSIDE" width="106.0">
+         <fill>
+            <RadialGradient centerX="0.48333333333333334" centerY="1.0" radius="0.5">
+               <stops>
+                  <Stop color="#2fff00" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Rectangle>
+      <TextArea fx:id="leaderBoardOutput" layoutX="250.0" layoutY="150.0" prefHeight="200.0" prefWidth="500.0" />
+      <Label layoutX="341.0" layoutY="53.0" text="Leaderboard" textFill="WHITE">
+         <font>
+            <Font name="Felix Titling" size="40.0" />
+         </font>
+      </Label>
+      <Button fx:id="home" layoutX="46.0" layoutY="404.0" mnemonicParsing="false" onAction="#onButtonClicked" prefHeight="37.0" prefWidth="125.0" text="Home">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="DialogButton" layoutX="429.0" layoutY="387.0" prefWidth="150.0" text ="Select Level Number" onAction="#onButtonClicked"/>
+   </children>
+</AnchorPane>

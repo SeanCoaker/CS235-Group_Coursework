@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="300" prefWidth="1000" style="-fx-background-color: #606060FF;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LevelEditorController">
+    <BorderPane fx:id="boarderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+        <left>
+            <VBox prefHeight="442.0" prefWidth="190.0" styleClass="3">
+                <Label prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #606060FF; -fx-border-color: #D6ED17FF;" text="Collectables" textFill="#d6ed17" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font size="26.0" />
+                    </font>
+                </Label>
+                <HBox fx:id="collectablesBox" prefHeight="0.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+                <Label prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #606060FF; -fx-border-color: #D6ED17FF;" text="Doors" textFill="#d6ed17" AnchorPane.topAnchor="100.0" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font size="26.0" />
+                    </font>
+                </Label>
+                <HBox fx:id="doorsBox" prefHeight="0.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0" />
+                <Label prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #606060FF; -fx-border-color: #D6ED17FF;" text="Environment" textFill="#d6ed17" AnchorPane.topAnchor="200" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font size="26.0" />
+                    </font>
+                </Label>
+                <HBox fx:id="environmentBox" prefHeight="0.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="250" />
+                <Label prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #606060FF; -fx-border-color: #D6ED17FF;" text="Movable Entities" textFill="#d6ed17" AnchorPane.topAnchor="300" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font size="26.0" />
+                    </font>
+                </Label>
+                <HBox fx:id="moveableEntitiesBox" prefHeight="0.0" prefWidth="0.0" styleClass="3" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="350" />
+                <Label prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #606060FF; -fx-border-color: #D6ED17FF;" text="Selected Image: " textFill="#d6ed17" AnchorPane.topAnchor="400" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font size="26.0" />
+                    </font>
+                </Label>
+                <ImageView fx:id="selectedImage" fitHeight="100" fitWidth="100" preserveRatio="true" styleClass="3" />
+
+
+                <padding>
+                    <Insets top="10.0" />
+                </padding>
+
+            </VBox>
+
+
+        </left>
+        <center>
+            <ScrollPane fx:id="scrollPaneMap" pannable="true" prefHeight="472.0" prefWidth="679.0" style="-fx-border-color: #D6ED17FF;" BorderPane.alignment="CENTER">
+                <GridPane fx:id="gridPaneMap" gridLinesVisible="true" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                    </rowConstraints>
+                </GridPane>
+                <padding>
+                    <Insets left="10.0" top="20.0" />
+                </padding>
+                <BorderPane.margin>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </BorderPane.margin>
+            </ScrollPane>
+        </center>
+        <opaqueInsets>
+            <Insets />
+        </opaqueInsets>
+        <bottom>
+            <AnchorPane  prefHeight="76.0" prefWidth="812.0" style="-fx-background-color: #606060FF;"
+                         BorderPane.alignment="CENTER">
+                <HBox fx:id="hboxLineEnemyDirection" visible="false">
+                    <Button fx:id="btnLineEnemyHorizontal" alignment="CENTER" mnemonicParsing="false"
+                            onAction="#onClickLineEnemyDirection" prefHeight="44.0" prefWidth="120.0"
+                            style="-fx-background-color: #606060FF; -fx-border-color: #D6ED17FF; -fx-font-size: 19"
+                            text="Horizontal" textFill="#d6ed17">
+                    </Button>
+                    <Button fx:id="btnLineEnemyVertical" alignment="CENTER" mnemonicParsing="false"
+                            onAction="#onClickLineEnemyDirection" prefHeight="44.0" prefWidth="120.0"
+                            style="-fx-background-color: #606060FF; -fx-border-color: #D6ED17FF; -fx-font-size: 19"
+                            text="Vertical" textFill="#d6ed17">
+                    </Button>
+                </HBox>
+                <HBox fx:id="hboxTokens" visible="false">
+                    <Button fx:id="btnToken1" alignment="CENTER" mnemonicParsing="false"
+                            onAction="#onClickTokens" prefHeight="44.0" prefWidth="44.0"
+                            style="-fx-background-color: #606060FF; -fx-border-color: #D6ED17FF; -fx-font-size: 19"
+                            text="1" textFill="#d6ed17">
+                    </Button>
+                    <Button fx:id="btnToken2" alignment="CENTER" mnemonicParsing="false"
+                            onAction="#onClickTokens" prefHeight="44.0" prefWidth="44.0"
+                            style="-fx-background-color: #606060FF; -fx-border-color: #D6ED17FF; -fx-font-size: 19"
+                            text="2" textFill="#d6ed17">
+                    </Button>
+                    <Button fx:id="btnToken3" alignment="CENTER" mnemonicParsing="false"
+                            onAction="#onClickTokens" prefHeight="44.0" prefWidth="44.0"
+                            style="-fx-background-color: #606060FF; -fx-border-color: #D6ED17FF; -fx-font-size: 19"
+                            text="3" textFill="#d6ed17">
+                    </Button>
+                    <Button fx:id="btnToken4" alignment="CENTER" mnemonicParsing="false"
+                            onAction="#onClickTokens" prefHeight="44.0" prefWidth="44.0"
+                            style="-fx-background-color: #606060FF; -fx-border-color: #D6ED17FF; -fx-font-size: 19"
+                            text="4" textFill="#d6ed17">
+                    </Button>
+                    <Button fx:id="btnToken5" alignment="CENTER" mnemonicParsing="false"
+                            onAction="#onClickTokens" prefHeight="44.0" prefWidth="44.0"
+                            style="-fx-background-color: #606060FF; -fx-border-color: #D6ED17FF; -fx-font-size: 19"
+                            text="5" textFill="#d6ed17">
+                    </Button>
+                    <Button fx:id="btnToken6" alignment="CENTER" mnemonicParsing="false"
+                            onAction="#onClickTokens" prefHeight="44.0" prefWidth="44.0"
+                            style="-fx-background-color: #606060FF; -fx-border-color: #D6ED17FF; -fx-font-size: 19"
+                            text="6" textFill="#d6ed17">
+                    </Button>
+                    <Button fx:id="btnToken7" alignment="CENTER" mnemonicParsing="false"
+                            onAction="#onClickTokens" prefHeight="44.0" prefWidth="44.0"
+                            style="-fx-background-color: #606060FF; -fx-border-color: #D6ED17FF; -fx-font-size: 19"
+                            text="7" textFill="#d6ed17">
+                    </Button>
+                    <Button fx:id="btnToken8" alignment="CENTER" mnemonicParsing="false"
+                            onAction="#onClickTokens" prefHeight="44.0" prefWidth="44.0"
+                            style="-fx-background-color: #606060FF; -fx-border-color: #D6ED17FF; -fx-font-size: 19"
+                            text="8" textFill="#d6ed17">
+                    </Button>
+                    <Button fx:id="btnToken9" alignment="CENTER" mnemonicParsing="false"
+                            onAction="#onClickTokens" prefHeight="44.0" prefWidth="44.0"
+                            style="-fx-background-color: #606060FF; -fx-border-color: #D6ED17FF; -fx-font-size: 19"
+                            text="9" textFill="#d6ed17">
+                    </Button>
+                </HBox>
+                <Slider fx:id="mySlider" blockIncrement="0.1" layoutX="584.0" layoutY="18.0" majorTickUnit="0.1"
+                        max="1.0" minorTickCount="1" onDragDetected="#sliderClicked" prefHeight="40.0" prefWidth="400.0"
+                        showTickLabels="true" showTickMarks="true"
+                        style="-fx-border-color: #D6ED17FF; -fx-background-color: white;" value="0.5"/>
+            </AnchorPane>
+        </bottom>
+        <top>
+            <HBox alignment="CENTER_RIGHT" spacing="13.0" style="-fx-background-color: #606060FF;">
+                <children>
+                    <Button fx:id="btnClear" alignment="CENTER" mnemonicParsing="false" onAction="#onClickClear" prefHeight="44.0" prefWidth="98.0" style="-fx-background-color: #606060FF; -fx-border-color: #D6ED17FF; -fx-font-size: 19" text="Clear" textFill="#d6ed17">
+                        <HBox.margin>
+                            <Insets right="10.0" top="10.0"/>
+                        </HBox.margin>
+                  </Button>
+                    <Label fx:id="titleBox" prefHeight="30.0" style="-fx-background-color: #606060FF; -fx-border-color: #D6ED17FF;" textFill="#d6ed17">
+                        <font>
+                            <Font size="26.0" />
+                        </font>
+                        <HBox.margin>
+                            <Insets right="10.0" top="10.0" />
+                        </HBox.margin>
+                    </Label>
+                    <Button fx:id="btnBack" mnemonicParsing="false" onAction="#btnSizeClicked" prefHeight="44.0" prefWidth="96.0" style="-fx-background-color: #606060FF; -fx-border-color: #D6ED17FF;" text="Back" textFill="#d6ed17">
+                        <font>
+                            <Font size="19.0" />
+                        </font>
+                        <HBox.margin>
+                            <Insets right="10.0" top="10.0" />
+                        </HBox.margin>
+                    </Button>
+                    <Button fx:id="btnSave" mnemonicParsing="false" onAction="#onClickSave" prefHeight="30.0" prefWidth="100.0" style="-fx-border-color: #D6ED17FF; -fx-background-color: #606060FF;" text="Save" textFill="#d6ed17">
+                        <font>
+                            <Font size="19.0" />
+                        </font>
+                        <HBox.margin>
+                            <Insets right="10.0" top="10.0" />
+                        </HBox.margin>
+                    </Button>
+                </children>
+                <padding>
+                    <Insets bottom="10.0" left="10.0" />
+                </padding>
+            </HBox>
+        </top>
+    </BorderPane>
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="boarderPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-image: url(menuBackgroundImage.jpg); -fx-background-size: 860;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StartController">
+   <center>
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="353.0" prefWidth="397.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="860.0" minWidth="10.0" prefWidth="860.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="425.0" minWidth="0.0" prefWidth="0.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="195.0" minHeight="0.0" prefHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="528.0" minHeight="10.0" prefHeight="446.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="391.0" minHeight="10.0" prefHeight="127.0" vgrow="SOMETIMES" />
+
+
+
+
+         </rowConstraints>
+         <children>
+            <VBox prefHeight="100" prefWidth="100" GridPane.rowIndex="1" />
+         </children>
+
+         <VBox alignment="CENTER" prefHeight="300.0" prefWidth="397.0" spacing="10.0" GridPane.rowIndex="1">
+            <TextField fx:id="user" alignment="CENTER" layoutX="197.0" layoutY="175.0" onKeyReleased="#handleKeyReleased" prefHeight="26.0" prefWidth="787.0" promptText="Enter player name" />
+            <Button fx:id="create" blendMode="DARKEN" layoutX="256.0" layoutY="210.0" onAction="#onButtonClicked2" prefHeight="32.0" prefWidth="97.0" text="Create" />
+         </VBox>
+
+
+         <HBox alignment="CENTER_RIGHT" layoutX="14.0" layoutY="14.0" prefHeight="218.0" prefWidth="835.0" GridPane.rowIndex="2">
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#onButtonClicked2" prefHeight="41.0" prefWidth="96.0" text="back" />
+         </HBox>
+      </GridPane>
+   </center>
+
+
+
+
+   <top>
+      <MenuBar>
+         <Menu text="Game">
+            <items>
+               <MenuItem text="Load..." fx:id ="load" onAction="#clickMenu"/>
+               <SeparatorMenuItem />
+               <MenuItem text="Exit." fx:id="exit" onAction="#clickMenu"/>
+            </items>
+         </Menu>
+      </MenuBar>
+   </top>
+</BorderPane>

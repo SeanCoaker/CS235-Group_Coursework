@@ -1,0 +1,23 @@
+3
+20 20
+########################################
+##PPFL----WWWWWWWWFLFFFFFFFFKG--FB######
+######------FFFFFFT3WWWWWWFF--*0--######
+######TTTTTTLE------------FFFF----######
+##WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW##
+########----TTTT####TTTT####TTTT----####
+######TTTT##############FFFFDE------####
+##WWWWWW--------##----##-----WWWWW----##
+##FB--T9--------##--WE##--WWWWWWWWWWWW##
+##WWWW##FFFFFFFF##----##################
+##FFFFFFFFFFFFFFFF######FFFFFFFFFFFFFFWW
+########--------------FFFFFFFFFFFFFFFF##
+##TTDR----------------------WWWWWWWWWW##
+########--------------------DR--GGWWWW##
+##--------------------WWWWWWWWWWWWWWWW##
+##WWWWWWWWWWWWWWWWWWWWWWWWWWWWTTTTTTTT##
+##WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW##
+##WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW##
+##WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW##
+########################################
+(4, 6) 0;(7, 14) 0;(10, 9) 1;

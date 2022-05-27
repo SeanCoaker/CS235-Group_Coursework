@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane prefHeight="600.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main">
+   <children>
+      <Canvas fx:id="canvas" height="609.0" layoutY="-3.0" width="860.0"/>
+   </children>
+</Pane >
